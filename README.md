@@ -22,4 +22,4 @@ docker build -t hello-argo:0.1.0 .
    - kind: `kind load docker-image hello-argo:0.1.0`; minikube: `minikube image load hello-argo:0.1.0`.
    - Remote cluster: push to a registry and set `image.repository` / `image.tag` in `helm/hello-argo/values.yaml`.
 3. `kubectl apply -n argocd -f argocd/application.yaml`
-4. Check: `kubectl -n hello-argo port-forward svc/hello-argo-hello-argo 8081:80` then open http://localhost:8081
+4. Check: `kubectl -n hello-argo port-forward svc/hello-argo 8081:80` then open http://localhost:8081
